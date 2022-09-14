@@ -1,0 +1,100 @@
+.gen-container {
+  min-height: calc(100vh - 77px);
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: contain;
+  text-align: center;
+  background: linear-gradient(-45deg, #000000, #2f0033, #004252, #00095c);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  padding-bottom: 50px;
+}
+
+.gen-container > h1 {
+  text-transform: lowercase;
+  margin-top: 20px;
+}
+
+.how-to {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 400px;
+  height: auto;
+  margin-top: 20px;
+  padding: 10px;
+  min-width: 30vw;
+  max-width: calc(100vw - 20px);
+}
+
+.how-to h2,
+.how-to p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  margin-top: 5px;
+}
+
+.how-to button {
+  margin: 7px;
+}
+
+.close {
+  animation-name: dismiss, hide;
+  animation-duration: 700ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 100ms;
+}
+
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+
+@keyframes hide {
+  100% {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.modSynth {
+  height: 475px;
+}
+
+@media screen and (max-width: 768px) {
+  .modSynth {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modSynth {
+    height: 300px;
+  }
+}
